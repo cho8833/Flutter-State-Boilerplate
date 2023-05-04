@@ -7,6 +7,7 @@ class ExampleRepositoryImpl extends ExampleRepository {
 
   @override
   Future<List<ExampleModel>> loadData() async {
+    await Future.delayed(const Duration(seconds: 1));
     return Future.value([ExampleModel("example")]);
   }
 }
